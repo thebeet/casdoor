@@ -59,6 +59,8 @@ module.exports = {
     configure: (webpackConfig, { env, paths }) => {
       paths.appBuild = path.resolve(__dirname, "build-temp");
       webpackConfig.output.path = path.resolve(__dirname, "build-temp");
+      webpackConfig.output.publicPath = "/casdoor";
+      webpackConfig.output.chunkFormat = false;
 
       // ignore webpack warnings by source-map-loader
       // https://github.com/facebook/create-react-app/pull/11752#issuecomment-1345231546

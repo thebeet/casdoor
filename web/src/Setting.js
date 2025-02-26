@@ -30,7 +30,7 @@ import {EmailMfaType, SmsMfaType, TotpMfaType} from "./auth/MfaSetupPage";
 
 const {Option} = Select;
 
-export const ServerUrl = "";
+export const ServerUrl = "/casdoor";
 
 export const StaticBaseUrl = "https://cdn.casbin.org";
 
