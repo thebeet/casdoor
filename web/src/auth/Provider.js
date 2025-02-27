@@ -387,7 +387,7 @@ export function getAuthUrl(application, provider, method, code) {
   }
 
   let endpoint = authInfo[provider.type].endpoint;
-  let redirectUri = `${window.location.origin}/callback`;
+  let redirectUri = `${window.location.origin}/casdoor/callback`;
   let scope = authInfo[provider.type].scope;
   const isShortState = (provider.type === "WeChat" && navigator.userAgent.includes("MicroMessenger")) || (provider.type === "Twitter");
   const state = Util.getStateFromQueryParams(application.name, provider.name, method, isShortState);

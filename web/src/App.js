@@ -335,20 +335,20 @@ class App extends Component {
   }
 
   isDoorPages() {
-    return this.isEntryPages() || window.location.pathname.startsWith("/callback");
+    return this.isEntryPages() || window.location.pathname.startsWith("/casdoor/callback");
   }
 
   isEntryPages() {
-    return window.location.pathname.startsWith("/signup") ||
-        window.location.pathname.startsWith("/login") ||
-        window.location.pathname.startsWith("/forget") ||
-        window.location.pathname.startsWith("/prompt") ||
-        window.location.pathname.startsWith("/result") ||
-        window.location.pathname.startsWith("/cas") ||
-        window.location.pathname.startsWith("/select-plan") ||
-        window.location.pathname.startsWith("/buy-plan") ||
-        window.location.pathname.startsWith("/qrcode") ||
-        window.location.pathname.startsWith("/captcha");
+    return window.location.pathname.startsWith("/casdoor/signup") ||
+        window.location.pathname.startsWith("/casdoor/login") ||
+        window.location.pathname.startsWith("/casdoor/forget") ||
+        window.location.pathname.startsWith("/casdoor/prompt") ||
+        window.location.pathname.startsWith("/casdoor/result") ||
+        window.location.pathname.startsWith("/casdoor/cas") ||
+        window.location.pathname.startsWith("/casdoor/select-plan") ||
+        window.location.pathname.startsWith("/casdoor/buy-plan") ||
+        window.location.pathname.startsWith("/casdoor/qrcode") ||
+        window.location.pathname.startsWith("/casdoor/captcha");
   }
 
   onClick = ({key}) => {

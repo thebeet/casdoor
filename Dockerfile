@@ -1,10 +1,10 @@
-FROM --platform=$BUILDPLATFORM node:18.19.0 AS FRONT
+FROM node:18.19.0 AS FRONT
 WORKDIR /web
 COPY ./web .
 RUN yarn install --frozen-lockfile --network-timeout 1000000 && yarn run build
 
 
-FROM --platform=$BUILDPLATFORM golang:1.20.12 AS BACK
+FROM golang:1.20.12 AS BACK
 WORKDIR /go/src/casdoor
 COPY . .
 RUN ./build.sh

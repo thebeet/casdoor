@@ -34,7 +34,7 @@ const container = document.getElementById("root");
 
 const app = createRoot(container);
 
-app.render(<BrowserRouter>
+app.render(<BrowserRouter basename="/casdoor">
   <App />
 </BrowserRouter>);
 

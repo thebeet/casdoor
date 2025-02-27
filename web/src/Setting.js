@@ -1272,6 +1272,9 @@ export function renderSignupLink(application, text) {
     url = null;
   } else if (window.location.pathname.includes("/login/oauth/authorize")) {
     url = window.location.pathname.replace("/login/oauth/authorize", "/signup/oauth/authorize");
+    if (url.startsWith("/casdoor")) {
+      url = url.slice("/casdoor".length);
+    }
   } else if (authConfig.appName === application.name) {
     url = "/signup";
   } else {
